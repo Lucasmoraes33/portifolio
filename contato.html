@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="inicio.css">
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <header class="container">
+        <div class="page-header">
+            <div class="logo">
+                <a href="#">Logo.</a>
+            </div>
+            <input type="checkbox" id="click">
+
+            <label for="click" class="mainicon">
+                <div class="menu">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </label>
+            <ul>
+                <li><a href="inicio.html"  class="active" style="--navAni:1">Home</a></li>
+                <li><a href="sobre.html" style="--navAni:2">Sobre</a></li>
+                <li><a href="habilidades.html" style="--navAni:3">Habiidades</a></li>
+                <li><a href="porti.html" style="--navAni:4">Portfólio</a></li>
+                <li><a href="contato.html" style="--navAni:5">Contato</a></li>
+            </ul>
+            <label class="mode">
+                <input type="checkbox" id="darkModeToggle">
+                <i class='bx bxs-moon'></i>
+            </label>
+        </div>
+    </header>
+
+
+    <section class="container">
+        <div class="main">
+            <div class="images">
+                <img src="CCA8381A-D308-4078-9E59-7529693B849C-fotor-bg-remover-20230701121743-PhotoRoom.png-PhotoRoom.png" alt="" class="img-w">
+                <span class="bg-effect-1">
+                <span class="bg-effect-1"></span>
+
+                </span>
+            </div>
+            <div class="detail">
+                <h3>Olá, sejam bem vindos</h3>
+                <h1><span style="color:#f9532d;">Lucas</span> Moraes</h1> 
+                <p>Sou estagiario Back-end Java</p>
+                <div class="button">
+                    <button>
+                        <a href="mailto:joselucasmoraes066@gmail.com">Entrar em contato</a>
+                     </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+        if (isDarkMode) {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+        darkModeToggle.addEventListener('change', () => {
+            if (darkModeToggle.checked) {
+                body.classList.add('dark-mode');
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+    </script>
+</body>
+
+</html>
